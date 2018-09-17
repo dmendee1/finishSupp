@@ -246,8 +246,7 @@ class OrderDetail extends React.Component {
                 <TableHeaderColumn dataField='technical_specifications' filter={ {type: 'TextFilter', delay: 500 } } editable={ { type: 'textarea', readOnly: true } } tdStyle={ { whiteSpace: 'normal' } } width="250px">БАҮ-НИЙ ТОДОРХОЙЛОЛТ ТЕХНИКИЙН ҮЗҮҮЛЭЛТ</TableHeaderColumn>
                 <TableHeaderColumn dataField='purpose' filter={ {type: 'TextFilter', delay: 500 } } tdStyle={ { whiteSpace: 'normal' } }  editable={ { readOnly: true } } width="250px">ЗОРИУЛАЛТ</TableHeaderColumn>
                             
-              </BootstrapTable>
-                <ShowImages orderId={order[0].order_id}/>
+            </BootstrapTable>
               <div className="clearfix">
                 <BootstrapTable data={ verify } search={true}>
                   <TableHeaderColumn dataField='order_id' filter={ {type: 'TextFilter', delay: 500 } }>Захиалгын дугаар</TableHeaderColumn>

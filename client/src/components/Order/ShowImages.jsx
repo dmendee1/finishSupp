@@ -78,8 +78,8 @@ class ShowImages extends Component {
         imagess.push({'src':require("../../uploads/" + this.props.orderId + "/" + prop.name), 'thumbnail':require("../../uploads/" + this.props.orderId + "/" + prop.name), width: 3, height: 2})
       )}
     }
-    return (
-      if(imagess !== undefined) {
+    if(imagess !== undefined) {
+      return (
         <div>
           <Button
             color="dark"
@@ -108,10 +108,10 @@ class ShowImages extends Component {
             </ModalBody>
           </Modal>
         </div>
-      } else {
-        <div>Loading ...</div> 
-      }
-    );
+      );
+    } else {
+      return(<div>Loading ...</div> );
+    }
   }
 }
 

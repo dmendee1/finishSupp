@@ -79,34 +79,38 @@ class ShowImages extends Component {
       )}
     }
     return (
-      <div>
-        <Button
-          color="dark"
-          style={{ marginBottom: '2rem' }}
-          onClick={this.toggle}
-        >
-          Хавсралтууд
-        </Button>
+      if(imagess !== undefined) {
+        <div>
+          <Button
+            color="dark"
+            style={{ marginBottom: '2rem' }}
+            onClick={this.toggle}
+          >
+            Хавсралтууд
+          </Button>
 
-        <Modal isOpen={this.state.modal} toggle={this.toggle} className="modal-lg">
-          <ModalHeader toggle={this.toggle}>Хавсаргасан зураг</ModalHeader>
-          <ModalBody>
-            <div>
-              Механикчийн акт хавсаргах: <UploadFile od_id={order[0].order_id}/>
-            </div>
-            <div className="clearfix">
-              <Gallery images={imagess} onClick={this.openLightbox} />
-              <Lightbox images={imagess}
-                onClose={this.closeLightbox}
-                onClickPrev={this.gotoPrevious}
-                onClickNext={this.gotoNext}
-                currentImage={this.state.currentImage}
-                isOpen={this.state.lightboxIsOpen}
-              />
-            </div>
-          </ModalBody>
-        </Modal>
-      </div>
+          <Modal isOpen={this.state.modal} toggle={this.toggle} className="modal-lg">
+            <ModalHeader toggle={this.toggle}>Хавсаргасан зураг</ModalHeader>
+            <ModalBody>
+              <div>
+                Механикчийн акт хавсаргах: <UploadFile od_id={order[0].order_id}/>
+              </div>
+              <div className="clearfix">
+                <Gallery images={imagess} onClick={this.openLightbox} />
+                <Lightbox images={imagess}
+                  onClose={this.closeLightbox}
+                  onClickPrev={this.gotoPrevious}
+                  onClickNext={this.gotoNext}
+                  currentImage={this.state.currentImage}
+                  isOpen={this.state.lightboxIsOpen}
+                />
+              </div>
+            </ModalBody>
+          </Modal>
+        </div>
+      } else {
+        <div>Loading ...</div> 
+      }
     );
   }
 }

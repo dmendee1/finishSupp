@@ -11,7 +11,7 @@ import indexRoutes from "./routes/index.jsx";
 require('../node_modules/react-bootstrap-table/dist/react-bootstrap-table-all.min.css');
 
 ReactDOM.render(
-  <Router}>
+  <Router>
     <Switch>
       {indexRoutes.map((prop, key) => {
         return (

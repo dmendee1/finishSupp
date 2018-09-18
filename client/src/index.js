@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Router, Route, Switch, hashHistory } from "react-router-dom";
+import { Router, Route, Switch } from "react-router-dom";
+import { hashHistory } from "react-router";
 import registerServiceWorker from './registerServiceWorker';
 
 import "./assets/css/material-dashboard-react.css";

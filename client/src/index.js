@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Router, Route, Switch } from "react-router-dom";
-import { hashHistory } from "react-router";
+import { createBrowserHistory } from 'history'
 import registerServiceWorker from './registerServiceWorker';
 
 import "./assets/css/material-dashboard-react.css";
@@ -12,7 +12,7 @@ import indexRoutes from "./routes/index.jsx";
 require('../node_modules/react-bootstrap-table/dist/react-bootstrap-table-all.min.css');
 
 ReactDOM.render(
-  <Router history={hashHistory}>
+  <Router history={createBrowserHistory}>
     <Switch>
       {indexRoutes.map((prop, key) => {
         return (
